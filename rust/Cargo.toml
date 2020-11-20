@@ -8,7 +8,7 @@ authors = [
   "laser <l@s3r.com>"
 ]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/filecoin-project/filecoin-ffi"
+repository = "https://github.com/filestar-project/filecoin-ffi"
 readme = "README.md"
 edition = "2018"
 publish = false
@@ -36,6 +36,8 @@ serde_json = "1.0.46"
 rust-gpu-tools = "0.2.0"
 
 [dependencies.filecoin-proofs-api]
+git = "https://github.com/aliensero/filestar-rust-filecoin-proofs-api.git"
+branch = "master"
 package = "filecoin-proofs-api"
 version = "5.4.1"
 default-features = false

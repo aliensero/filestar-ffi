@@ -972,6 +972,8 @@ func toFilRegisteredSealProof(p abi.RegisteredSealProof) (generated.FilRegistere
 		return generated.FilRegisteredSealProofStackedDrg8MiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg512MiBV1:
 		return generated.FilRegisteredSealProofStackedDrg512MiBV1, nil
+    case abi.RegisteredSealProof_StackedDrg8GiBV1:
+        return generated.FilRegisteredSealProofStackedDrg8GiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg32GiBV1:
 		return generated.FilRegisteredSealProofStackedDrg32GiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg64GiBV1:
