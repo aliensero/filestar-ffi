@@ -265,6 +265,7 @@ func WorkflowRegisteredSealProofFunctions(t TestHelper) {
 		abi.RegisteredSealProof_StackedDrg2KiBV1,
 		abi.RegisteredSealProof_StackedDrg8MiBV1,
 		abi.RegisteredSealProof_StackedDrg512MiBV1,
+		abi.RegisteredSealProof_StackedDrg8GiBV1,
 		abi.RegisteredSealProof_StackedDrg32GiBV1,
 		abi.RegisteredSealProof_StackedDrg64GiBV1,
 
@@ -287,12 +288,14 @@ func WorkflowRegisteredPoStProofFunctions(t TestHelper) {
 		abi.RegisteredPoStProof_StackedDrgWinning2KiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning8MiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning512MiBV1,
+		abi.RegisteredPoStProof_StackedDrgWinning8GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning32GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWinning64GiBV1,
 
 		abi.RegisteredPoStProof_StackedDrgWindow2KiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow8MiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow512MiBV1,
+		abi.RegisteredPoStProof_StackedDrgWindow8GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow32GiBV1,
 		abi.RegisteredPoStProof_StackedDrgWindow64GiBV1,
 	}

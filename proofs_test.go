@@ -148,6 +148,7 @@ func TestProofTypes(t *testing.T) {
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning2KiBV1, abi.RegisteredPoStProof_StackedDrgWinning2KiBV1)
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning8MiBV1, abi.RegisteredPoStProof_StackedDrgWinning8MiBV1)
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning512MiBV1, abi.RegisteredPoStProof_StackedDrgWinning512MiBV1)
+	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning8GiBV1, abi.RegisteredPoStProof_StackedDrgWinning8GiBV1)
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning32GiBV1, abi.RegisteredPoStProof_StackedDrgWinning32GiBV1)
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWinning64GiBV1, abi.RegisteredPoStProof_StackedDrgWinning64GiBV1)
 	assert.EqualValues(t, generated.FilRegisteredPoStProofStackedDrgWindow2KiBV1, abi.RegisteredPoStProof_StackedDrgWindow2KiBV1)
@@ -159,6 +160,7 @@ func TestProofTypes(t *testing.T) {
 	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg2KiBV1, abi.RegisteredSealProof_StackedDrg2KiBV1)
 	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg8MiBV1, abi.RegisteredSealProof_StackedDrg8MiBV1)
 	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg512MiBV1, abi.RegisteredSealProof_StackedDrg512MiBV1)
+	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg8GiBV1, abi.RegisteredSealProof_StackedDrg8GiBV1)
 	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg32GiBV1, abi.RegisteredSealProof_StackedDrg32GiBV1)
 	assert.EqualValues(t, generated.FilRegisteredSealProofStackedDrg64GiBV1, abi.RegisteredSealProof_StackedDrg64GiBV1)
 }
