@@ -29,42 +29,21 @@ cpu_features_required_for_optimized_release=$(jq -r '.[].check_cpu_for_feature |
 
 main() {
     local __release_flags=$(get_release_flags)
-    if [ "${FFI_BUILD_FROM_SOURCE}" != "1" ] && download_release_tarball __tarball_path "${rust_sources_dir}" "filecoin-ffi" "${__release_flags}"; then
-        local __tmp_dir=$(mktemp -d)
+    (>&2 echo "[install-filcrypto/main] building libfilcrypto from local sources (dir = ${rust_sources_dir})")
 
-        # silence shellcheck warning as the assignment happened in
-        # `download_release_tarball()`
-        # shellcheck disable=SC2154
-        # extract downloaded tarball to temporary directory
-        #
-        tar -C "${__tmp_dir}" -xzf "${__tarball_path}"
+    # build libfilcrypto (and corresponding header and pkg-config)
+    #
+    build_from_source "filcrypto" "${rust_sources_dir}" "${__release_flags}"
 
-        # copy build assets into root of filecoin-ffi
-        #
-        find -L "${__tmp_dir}" -type f -name filcrypto.h -exec cp -- "{}" . \;
-        find -L "${__tmp_dir}" -type f -name libfilcrypto.a -exec cp -- "{}" . \;
-        find -L "${__tmp_dir}" -type f -name filcrypto.pc -exec cp -- "{}" . \;
+    # copy from Rust's build directory (target) to root of filecoin-ffi
+    #
+    find -L "${rust_sources_dir}/target/release" -type f -name filcrypto.h -exec cp -- "{}" . \;
+    find -L "${rust_sources_dir}/target/release" -type f -name libfilcrypto.a -exec cp -- "{}" . \;
+    find -L "${rust_sources_dir}" -type f -name filcrypto.pc -exec cp -- "{}" . \;
 
-        check_installed_files
+    check_installed_files
 
-        (>&2 echo "[install-filcrypto/main] successfully installed prebuilt libfilcrypto")
-    else
-        (>&2 echo "[install-filcrypto/main] building libfilcrypto from local sources (dir = ${rust_sources_dir})")
-
-        # build libfilcrypto (and corresponding header and pkg-config)
-        #
-        build_from_source "filcrypto" "${rust_sources_dir}" "${__release_flags}"
-
-        # copy from Rust's build directory (target) to root of filecoin-ffi
-        #
-        find -L "${rust_sources_dir}/target/release" -type f -name filcrypto.h -exec cp -- "{}" . \;
-        find -L "${rust_sources_dir}/target/release" -type f -name libfilcrypto.a -exec cp -- "{}" . \;
-        find -L "${rust_sources_dir}" -type f -name filcrypto.pc -exec cp -- "{}" . \;
-
-        check_installed_files
-
-        (>&2 echo "[install-filcrypto/main] successfully built and installed libfilcrypto from source")
-    fi
+    (>&2 echo "[install-filcrypto/main] successfully built and installed libfilcrypto from source")
 }
 
 download_release_tarball() {
