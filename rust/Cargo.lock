@@ -1132,8 +1132,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b5cd67c8edf6905c6041ee733f2a7efe48394276f32a351f23bcb9f1453a33da"
 =======
 version = "5.1.1"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-filecoin-proofs-api.git#0d8ee932f53c561838b510666d2af32c1791e453"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-filecoin-proofs-api.git#49253c0f3bd01c63ccce934310e69eb892aa2288"
+>>>>>>> a979873 (update filecoin-proofs-api)
 dependencies = [
  "anyhow",
  "bellperson",
