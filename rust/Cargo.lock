@@ -83,6 +83,28 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "23b62fc65de8e4e7f52534fb52b0f3ed04746ae267519eef2a83941e8085068b"
 
 [[package]]
+name = "async-log"
+version = "1.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f5ba33304f3165922dd93565a36dda8ac96c28b1a926ad535ec904e48ecad59b"
+dependencies = [
+ "async-log-attributes",
+ "backtrace",
+ "log",
+]
+
+[[package]]
+name = "async-log-attributes"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "da97f8e61b19a72f67d8932de8b0905f7d41a1d7b9501b9938c7755f96f6362d"
+dependencies = [
+ "proc-macro2 0.4.30",
+ "quote 0.6.13",
+ "syn 0.15.44",
+]
+
+[[package]]
 name = "atty"
 version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -106,7 +128,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9d117600f438b1707d4e4ae15d3595657288f8235a0eb593e80ecc98ab34e1bc"
 dependencies = [
  "addr2line",
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "libc",
  "miniz_oxide",
  "object",
@@ -161,7 +187,29 @@ dependencies = [
 name = "bit-vec"
 version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
+<<<<<<< HEAD
 checksum = "349f9b6a179ed607305526ca489b34ad0a41aed5f7980fa90eb03160b69598fb"
+=======
+checksum = "66c0bb6167449588ff70803f4127f0684f9063097eca5016f37eb52b92c2cf36"
+dependencies = [
+ "bitflags",
+ "cexpr",
+ "cfg-if 0.1.10",
+ "clang-sys",
+ "clap",
+ "env_logger",
+ "lazy_static",
+ "lazycell",
+ "log",
+ "peeking_take_while",
+ "proc-macro2 1.0.20",
+ "quote 1.0.7",
+ "regex",
+ "rustc-hash",
+ "shlex",
+ "which",
+]
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 
 [[package]]
 name = "bitflags"
@@ -376,6 +424,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 
 [[package]]
+name = "cfg-if"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
+
+[[package]]
 name = "chrono"
 version = "0.4.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -422,6 +476,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "clicolors-control"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "90082ee5dcdd64dc4e9e0d37fbf3ee325419e39c0092191e0393df65518f741e"
+dependencies = [
+ "atty",
+ "lazy_static",
+ "libc",
+ "winapi 0.3.9",
+]
+
+[[package]]
 name = "config"
 version = "0.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -435,7 +501,29 @@ dependencies = [
 
 [[package]]
 name = "console"
+<<<<<<< HEAD
 version = "0.13.0"
+=======
+version = "0.7.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ca57c2c14b8a2bf3105bc9d15574aad80babf6a9c44b1058034cdf8bd169628"
+dependencies = [
+ "atty",
+ "clicolors-control",
+ "encode_unicode",
+ "lazy_static",
+ "libc",
+ "parking_lot",
+ "regex",
+ "termios",
+ "unicode-width",
+ "winapi 0.3.9",
+]
+
+[[package]]
+name = "console"
+version = "0.11.3"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a50aab2529019abfabfa93f1e6c41ef392f91fbf179b347a7e96abb524884a08"
 dependencies = [
@@ -504,7 +592,11 @@ version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "81156fece84ab6a9f2afdb109ce3ae577e42b1228441eded99bd77f627953b1a"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 ]
 
 [[package]]
@@ -514,6 +606,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "69323bff1fb41c635347b8ead484a5ca6c3f11914d784170b158d8449ab07f8e"
 dependencies = [
  "cfg-if 0.1.10",
+<<<<<<< HEAD
  "crossbeam-channel 0.4.4",
  "crossbeam-deque 0.7.3",
  "crossbeam-epoch 0.8.2",
@@ -533,6 +626,13 @@ dependencies = [
  "crossbeam-epoch 0.9.1",
  "crossbeam-queue 0.3.1",
  "crossbeam-utils 0.8.1",
+=======
+ "crossbeam-channel",
+ "crossbeam-deque",
+ "crossbeam-epoch",
+ "crossbeam-queue",
+ "crossbeam-utils",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 ]
 
 [[package]]
@@ -585,7 +685,11 @@ checksum = "058ed274caafc1f60c4997b5fc07bf7dc7cca454af7c6e81edffe5f33f70dace"
 dependencies = [
  "autocfg",
  "cfg-if 0.1.10",
+<<<<<<< HEAD
  "crossbeam-utils 0.7.2",
+=======
+ "crossbeam-utils",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "lazy_static",
  "maybe-uninit",
  "memoffset 0.5.6",
@@ -613,7 +717,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "774ba60a54c213d409d5353bda12d49cd68d14e45036a285234c8d6f91f92570"
 dependencies = [
  "cfg-if 0.1.10",
+<<<<<<< HEAD
  "crossbeam-utils 0.7.2",
+=======
+ "crossbeam-utils",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "maybe-uninit",
 ]
 
@@ -635,6 +743,7 @@ checksum = "c3c7c73a2d1e9fc0886a08b93e98eb643461230d5f1925e4036204d5f2e261a8"
 dependencies = [
  "autocfg",
  "cfg-if 0.1.10",
+<<<<<<< HEAD
  "lazy_static",
 ]
 
@@ -646,6 +755,8 @@ checksum = "02d96d1e189ef58269ebe5b97953da3274d83a93af647c2ddd6f9dab28cedb8d"
 dependencies = [
  "autocfg",
  "cfg-if 1.0.0",
+=======
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "lazy_static",
 ]
 
@@ -755,7 +866,11 @@ version = "0.8.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "80df024fbc5ac80f87dfef0d9f5209a252f2a497f7f42944cff24d8253cac065"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 ]
 
 [[package]]
@@ -815,6 +930,24 @@ name = "fake-simd"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e88a8acf291dafb59c2d96e8f59828f3838bb1a70398823ade51a84de6a6deed"
+
+[[package]]
+name = "femme"
+version = "1.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4d9ac2da60a2a97a0643d082f1cb25901a90e6f2f69f03baf9763721aa31ee6a"
+dependencies = [
+ "async-log",
+ "cfg-if 0.1.10",
+ "console 0.7.7",
+ "js-sys",
+ "log",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "wasm-bindgen",
+ "web-sys",
+]
 
 [[package]]
 name = "ff-cl-gen"
@@ -923,6 +1056,12 @@ dependencies = [
  "groupy",
  "libc",
  "log",
+<<<<<<< HEAD
+=======
+ "neptune 1.1.1",
+ "neptune-triton 2.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "paired",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "rand 0.7.3",
  "rand_chacha 0.2.2",
  "rayon",
@@ -933,9 +1072,14 @@ dependencies = [
 
 [[package]]
 name = "filecoin-proofs"
+<<<<<<< HEAD
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c49a59b1148dcdb4711bec11faa88f8b350a4edd8326d2bb7b2437c4a019fbec"
+=======
+version = "5.1.4"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "anyhow",
  "bellperson",
@@ -982,9 +1126,14 @@ dependencies = [
 
 [[package]]
 name = "filecoin-proofs-api"
+<<<<<<< HEAD
 version = "5.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b5cd67c8edf6905c6041ee733f2a7efe48394276f32a351f23bcb9f1453a33da"
+=======
+version = "5.1.1"
+source = "git+https://github.com/filestar-project/rust-filecoin-proofs-api.git#0d8ee932f53c561838b510666d2af32c1791e453"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "anyhow",
  "bellperson",
@@ -999,7 +1148,11 @@ version = "0.2.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d34cfa13a63ae058bfa601fe9e313bbdb3746427c1459185464ce0fcf62e1e8"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "libc",
  "redox_syscall 0.2.5",
  "winapi 0.3.9",
@@ -1011,7 +1164,11 @@ version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cd3aec53de10fe96d7d8c565eb17f2c687bb5518a2ec453b5b1252964526abe0"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "crc32fast",
  "libc",
  "miniz_oxide",
@@ -1186,7 +1343,11 @@ version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c9495705279e7140bf035dde1f6e750c162df8b625267cd52cc44e0b156732c8"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "libc",
  "wasi 0.10.2+wasi-snapshot-preview1",
 ]
@@ -1408,6 +1569,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "instant"
+version = "0.1.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "61124eeebbd69b8190558df225adf7e4caafce0d743919e5d6b19652314ec5ec"
+dependencies = [
+ "cfg-if 1.0.0",
+]
+
+[[package]]
 name = "iovec"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1478,8 +1648,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "21f866863575d0e1d654fbeeabdc927292fdf862873dc3c96c6f753357e13374"
 dependencies = [
  "arrayvec",
+<<<<<<< HEAD
  "bitflags 1.2.1",
  "cfg-if 1.0.0",
+=======
+ "bitflags",
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "ryu",
  "static_assertions",
 ]
@@ -1500,13 +1675,31 @@ dependencies = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "mapr"
 version = "0.8.0"
+=======
+name = "lock_api"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd96ffd135b2fd7b973ac026d28085defbe8983df057ced3eb4f2130b0831312"
+dependencies = [
+ "scopeguard",
+]
+
+[[package]]
+name = "log"
+version = "0.4.11"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "46a28a55dbc005b2f6f123c4058933d57add373d362f6fd3a76aab4fe6973500"
 dependencies = [
+<<<<<<< HEAD
  "libc",
  "winapi 0.3.9",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 ]
 
 [[package]]
@@ -1663,14 +1856,45 @@ dependencies = [
  "generic-array 0.14.4",
  "itertools 0.8.2",
  "lazy_static",
+<<<<<<< HEAD
  "log",
  "neptune-triton",
  "rust-gpu-tools 0.3.0",
+=======
+ "paired",
+]
+
+[[package]]
+name = "neptune"
+version = "1.2.3"
+source = "git+https://github.com/filestar-project/neptune.git#8a99573e0b9fa8f8f778eb9b222349c8a8c056d2"
+dependencies = [
+ "bellperson",
+ "blake2s_simd",
+ "byteorder 1.3.4",
+ "fff",
+ "generic-array 0.13.2",
+ "lazy_static",
+ "log",
+ "neptune-triton 2.1.0 (git+https://github.com/filestar-project/neptune-triton)",
+ "paired",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 ]
 
 [[package]]
 name = "neptune-triton"
 version = "2.1.0"
+<<<<<<< HEAD
+=======
+source = "git+https://github.com/filestar-project/neptune-triton#d3d458f8da71968ab5d77b1e7c426cd6a74fdb3b"
+dependencies = [
+ "cc",
+]
+
+[[package]]
+name = "neptune-triton"
+version = "2.1.0"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "16ef7eb7a6dc2b5186caea63098f6f47a26ac8814c292fa0a236cc53478ddbfa"
 dependencies = [
@@ -1858,8 +2082,13 @@ version = "0.10.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "038d43985d1ddca7a9900630d8cd031b56e4794eecc2e9ea39dd17aa04399a70"
 dependencies = [
+<<<<<<< HEAD
  "bitflags 1.2.1",
  "cfg-if 1.0.0",
+=======
+ "bitflags",
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "foreign-types",
  "lazy_static",
  "libc",
@@ -1918,6 +2147,31 @@ dependencies = [
  "hkdf",
  "rand_core 0.5.1",
  "serde",
+]
+
+[[package]]
+name = "parking_lot"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6d7744ac029df22dca6284efe4e898991d28e3085c706c972bcd7da4a27a15eb"
+dependencies = [
+ "instant",
+ "lock_api",
+ "parking_lot_core",
+]
+
+[[package]]
+name = "parking_lot_core"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9ccb628cad4f84851442432c60ad8e1f607e29752d0bf072cbd0baf28aa34272"
+dependencies = [
+ "cfg-if 1.0.0",
+ "instant",
+ "libc",
+ "redox_syscall",
+ "smallvec",
+ "winapi 0.3.9",
 ]
 
 [[package]]
@@ -2546,7 +2800,11 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fa827a14b29ab7f44778d14a88d3cb76e949c45083f7dbfa507d0cb699dc12de"
 dependencies = [
  "block-buffer 0.9.0",
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "cpuid-bool",
  "digest 0.9.0",
  "opaque-debug 0.3.0",
@@ -2564,8 +2822,7 @@ dependencies = [
 [[package]]
 name = "sha2raw"
 version = "2.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57da614e847c49a01979ffa0d9a030d983c4bb6e78a13ff20203a0169deeff42"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 dependencies = [
  "block-buffer 0.7.3",
  "cpuid-bool",
@@ -2594,12 +2851,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c111b5bd5695e56cffe5129854aa230b39c93a305372fdbb2668ca2394eea9f8"
 
 [[package]]
+name = "smallvec"
+version = "1.5.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ae524f056d7d770e174287294f562e95044c68e88dec909a00d2094805db9d75"
+
+[[package]]
 name = "socket2"
 version = "0.3.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "122e570113d28d773067fab24266b66753f6ea915758651696b6e35e49f88d6e"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "libc",
  "winapi 0.3.9",
 ]
@@ -2612,9 +2879,14 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
 name = "storage-proofs"
+<<<<<<< HEAD
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "12e40112e2867c532f611c3fc4af826a6e9db2144e269fda545826375bafb084"
+=======
+version = "5.1.4"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "storage-proofs-core",
  "storage-proofs-porep",
@@ -2623,9 +2895,14 @@ dependencies = [
 
 [[package]]
 name = "storage-proofs-core"
+<<<<<<< HEAD
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "191e0ad20e15d20dd2a173338816970d74654f0fd0ae89db188e9993760b98cb"
+=======
+version = "5.1.4"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "aes",
  "anyhow",
@@ -2644,7 +2921,7 @@ dependencies = [
  "log",
  "memmap",
  "merkletree",
- "neptune",
+ "neptune 1.2.3",
  "num_cpus",
  "rand 0.7.3",
  "rand_chacha 0.2.2",
@@ -2659,17 +2936,27 @@ dependencies = [
 
 [[package]]
 name = "storage-proofs-porep"
+<<<<<<< HEAD
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b20609e5bb968c708747c3922e6cd15661cb1515d5508bd96e0a4f1600acabe0"
+=======
+version = "5.1.4"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "anyhow",
  "bellperson",
  "bincode",
+<<<<<<< HEAD
  "byte-slice-cast",
  "byteorder 1.4.2",
  "crossbeam 0.8.0",
  "digest 0.9.0",
+=======
+ "byteorder 1.3.4",
+ "femme",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "fff",
  "generic-array 0.14.4",
  "hex",
@@ -2679,7 +2966,7 @@ dependencies = [
  "log",
  "mapr",
  "merkletree",
- "neptune",
+ "neptune 1.2.3",
  "num-bigint 0.2.6",
  "num-traits 0.2.14",
  "num_cpus",
@@ -2695,9 +2982,14 @@ dependencies = [
 
 [[package]]
 name = "storage-proofs-post"
+<<<<<<< HEAD
 version = "5.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48d3f62e46745d71c5359472a7f1017782eca46ea0c186dcb1a1cf5fad1e5c26"
+=======
+version = "5.1.4"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2710,7 +3002,7 @@ dependencies = [
  "hex",
  "log",
  "merkletree",
- "neptune",
+ "neptune 1.2.3",
  "num_cpus",
  "rand 0.7.3",
  "rayon",
@@ -2816,7 +3108,11 @@ version = "3.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dac1c663cfc93810f88aed9b8941d48cabf856a1b111c29a40439018d870eb22"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "libc",
  "rand 0.8.3",
  "redox_syscall 0.2.5",
@@ -2978,7 +3274,11 @@ version = "0.1.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f7d40a22fd029e33300d8d89a5cc8ffce18bb7c587662f54629e94c9de5487f3"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "log",
  "pin-project-lite 0.2.4",
  "tracing-core",
@@ -3124,7 +3424,11 @@ version = "0.2.70"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "55c0f7123de74f0dab9b7d00fd614e7b19349cd1e2f5252bbe9b1754b59433be"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "serde",
  "serde_json",
  "wasm-bindgen-macro",
@@ -3151,7 +3455,11 @@ version = "0.4.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3de431a2910c86679c34283a33f66f4e4abd7e0aec27b6669060148872aadf94"
 dependencies = [
+<<<<<<< HEAD
  "cfg-if 1.0.0",
+=======
+ "cfg-if 0.1.10",
+>>>>>>> 803fdd6 (move 8GiB enum to the end)
  "js-sys",
  "wasm-bindgen",
  "web-sys",

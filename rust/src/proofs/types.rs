@@ -55,14 +55,9 @@ pub enum fil_RegisteredSealProof {
     StackedDrg2KiBV1,
     StackedDrg8MiBV1,
     StackedDrg512MiBV1,
-    StackedDrg8GiBV1,
     StackedDrg32GiBV1,
     StackedDrg64GiBV1,
-    StackedDrg2KiBV1_1,
-    StackedDrg8MiBV1_1,
-    StackedDrg512MiBV1_1,
-    StackedDrg32GiBV1_1,
-    StackedDrg64GiBV1_1,
+    StackedDrg8GiBV1,
 }
 
 impl From<RegisteredSealProof> for fil_RegisteredSealProof {
@@ -121,15 +116,15 @@ pub enum fil_RegisteredPoStProof {
     StackedDrgWinning2KiBV1,
     StackedDrgWinning8MiBV1,
     StackedDrgWinning512MiBV1,
-    StackedDrgWinning8GiBV1,
     StackedDrgWinning32GiBV1,
     StackedDrgWinning64GiBV1,
     StackedDrgWindow2KiBV1,
     StackedDrgWindow8MiBV1,
     StackedDrgWindow512MiBV1,
-    StackedDrgWindow8GiBV1,
     StackedDrgWindow32GiBV1,
     StackedDrgWindow64GiBV1,
+    StackedDrgWinning8GiBV1,
+    StackedDrgWindow8GiBV1,
 }
 
 impl From<RegisteredPoStProof> for fil_RegisteredPoStProof {
