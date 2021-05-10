@@ -1078,8 +1078,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c49a59b1148dcdb4711bec11faa88f8b350a4edd8326d2bb7b2437c4a019fbec"
 =======
 version = "5.1.4"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
+>>>>>>> f956f32 (update rust-fil-proofs)
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2826,7 +2830,7 @@ dependencies = [
 [[package]]
 name = "sha2raw"
 version = "2.0.0"
-source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
 dependencies = [
  "block-buffer 0.7.3",
  "cpuid-bool",
@@ -2889,8 +2893,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "12e40112e2867c532f611c3fc4af826a6e9db2144e269fda545826375bafb084"
 =======
 version = "5.1.4"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
+>>>>>>> f956f32 (update rust-fil-proofs)
 dependencies = [
  "storage-proofs-core",
  "storage-proofs-porep",
@@ -2905,8 +2913,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "191e0ad20e15d20dd2a173338816970d74654f0fd0ae89db188e9993760b98cb"
 =======
 version = "5.1.4"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
+>>>>>>> f956f32 (update rust-fil-proofs)
 dependencies = [
  "aes",
  "anyhow",
@@ -2946,8 +2958,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b20609e5bb968c708747c3922e6cd15661cb1515d5508bd96e0a4f1600acabe0"
 =======
 version = "5.1.4"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
+>>>>>>> f956f32 (update rust-fil-proofs)
 dependencies = [
  "anyhow",
  "bellperson",
@@ -2992,8 +3008,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48d3f62e46745d71c5359472a7f1017782eca46ea0c186dcb1a1cf5fad1e5c26"
 =======
 version = "5.1.4"
+<<<<<<< HEAD
 source = "git+https://github.com/filestar-project/rust-fil-proofs.git#4755097986de81e77966cca0c20fc4d120a16ba8"
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+source = "git+https://github.com/filestar-project/rust-fil-proofs.git#c5461fd4eee5474f226e8c1be8af0bd421139f38"
+>>>>>>> f956f32 (update rust-fil-proofs)
 dependencies = [
  "anyhow",
  "bellperson",
