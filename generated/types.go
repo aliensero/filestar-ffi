@@ -13,10 +13,14 @@ package generated
 import "C"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilBLSSignature as declared in filecoin-ffi/filcrypto.h:61
 =======
 // FilBLSSignature as declared in filecoin-ffi/filcrypto.h:59
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilBLSSignature as declared in filecoin-ffi/filcrypto.h:59
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilBLSSignature struct {
 	Inner          [96]byte
 	refa2ac09ba    *C.fil_BLSSignature
@@ -24,10 +28,14 @@ type FilBLSSignature struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilAggregateResponse as declared in filecoin-ffi/filcrypto.h:68
 =======
 // FilAggregateResponse as declared in filecoin-ffi/filcrypto.h:66
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilAggregateResponse as declared in filecoin-ffi/filcrypto.h:66
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilAggregateResponse struct {
 	Signature      FilBLSSignature
 	refb3efa36d    *C.fil_AggregateResponse
@@ -35,10 +43,14 @@ type FilAggregateResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilClearCacheResponse as declared in filecoin-ffi/filcrypto.h:73
 =======
 // FilClearCacheResponse as declared in filecoin-ffi/filcrypto.h:71
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilClearCacheResponse as declared in filecoin-ffi/filcrypto.h:71
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilClearCacheResponse struct {
 	ErrorMsg       string
 	StatusCode     FCPResponseStatus
@@ -46,6 +58,7 @@ type FilClearCacheResponse struct {
 	allocsa9a80400 interface{}
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // FilZeroSignatureResponse as declared in filecoin-ffi/filcrypto.h:80
 type FilZeroSignatureResponse struct {
@@ -58,6 +71,9 @@ type FilZeroSignatureResponse struct {
 =======
 // FilFauxRepResponse as declared in filecoin-ffi/filcrypto.h:77
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilFauxRepResponse as declared in filecoin-ffi/filcrypto.h:77
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilFauxRepResponse struct {
 	ErrorMsg       string
 	StatusCode     FCPResponseStatus
@@ -67,10 +83,14 @@ type FilFauxRepResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilFinalizeTicketResponse as declared in filecoin-ffi/filcrypto.h:92
 =======
 // FilFinalizeTicketResponse as declared in filecoin-ffi/filcrypto.h:83
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilFinalizeTicketResponse as declared in filecoin-ffi/filcrypto.h:83
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilFinalizeTicketResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -80,10 +100,14 @@ type FilFinalizeTicketResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateDataCommitmentResponse as declared in filecoin-ffi/filcrypto.h:98
 =======
 // FilGenerateDataCommitmentResponse as declared in filecoin-ffi/filcrypto.h:89
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateDataCommitmentResponse as declared in filecoin-ffi/filcrypto.h:89
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateDataCommitmentResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -93,7 +117,11 @@ type FilGenerateDataCommitmentResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateFallbackSectorChallengesResponse as declared in filecoin-ffi/filcrypto.h:108
+=======
+// FilGenerateFallbackSectorChallengesResponse as declared in filecoin-ffi/filcrypto.h:99
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateFallbackSectorChallengesResponse struct {
 	ErrorMsg         string
 	StatusCode       FCPResponseStatus
@@ -106,10 +134,14 @@ type FilGenerateFallbackSectorChallengesResponse struct {
 	allocs7047a3fa   interface{}
 }
 
+<<<<<<< HEAD
 // FilGeneratePieceCommitmentResponse as declared in filecoin-ffi/filcrypto.h:119
 =======
 // FilGeneratePieceCommitmentResponse as declared in filecoin-ffi/filcrypto.h:100
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGeneratePieceCommitmentResponse as declared in filecoin-ffi/filcrypto.h:110
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGeneratePieceCommitmentResponse struct {
 	StatusCode      FCPResponseStatus
 	ErrorMsg        string
@@ -120,7 +152,11 @@ type FilGeneratePieceCommitmentResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVanillaProof as declared in filecoin-ffi/filcrypto.h:124
+=======
+// FilVanillaProof as declared in filecoin-ffi/filcrypto.h:115
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilVanillaProof struct {
 	ProofLen       uint
 	ProofPtr       []byte
@@ -128,7 +164,11 @@ type FilVanillaProof struct {
 	allocsb3e7638c interface{}
 }
 
+<<<<<<< HEAD
 // FilGenerateSingleVanillaProofResponse as declared in filecoin-ffi/filcrypto.h:130
+=======
+// FilGenerateSingleVanillaProofResponse as declared in filecoin-ffi/filcrypto.h:121
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateSingleVanillaProofResponse struct {
 	ErrorMsg       string
 	VanillaProof   FilVanillaProof
@@ -137,10 +177,14 @@ type FilGenerateSingleVanillaProofResponse struct {
 	allocsf9d21b04 interface{}
 }
 
+<<<<<<< HEAD
 // FilPoStProof as declared in filecoin-ffi/filcrypto.h:136
 =======
 // FilPoStProof as declared in filecoin-ffi/filcrypto.h:106
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPoStProof as declared in filecoin-ffi/filcrypto.h:127
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPoStProof struct {
 	RegisteredProof FilRegisteredPoStProof
 	ProofLen        uint
@@ -150,10 +194,14 @@ type FilPoStProof struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:145
 =======
 // FilGenerateWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:115
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:136
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateWindowPoStResponse struct {
 	ErrorMsg         string
 	ProofsLen        uint
@@ -166,10 +214,14 @@ type FilGenerateWindowPoStResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:152
 =======
 // FilGenerateWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:122
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:143
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateWinningPoStResponse struct {
 	ErrorMsg       string
 	ProofsLen      uint
@@ -180,10 +232,14 @@ type FilGenerateWinningPoStResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWinningPoStSectorChallenge as declared in filecoin-ffi/filcrypto.h:159
 =======
 // FilGenerateWinningPoStSectorChallenge as declared in filecoin-ffi/filcrypto.h:129
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWinningPoStSectorChallenge as declared in filecoin-ffi/filcrypto.h:150
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGenerateWinningPoStSectorChallenge struct {
 	ErrorMsg       string
 	StatusCode     FCPResponseStatus
@@ -194,10 +250,14 @@ type FilGenerateWinningPoStSectorChallenge struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGpuDeviceResponse as declared in filecoin-ffi/filcrypto.h:166
 =======
 // FilGpuDeviceResponse as declared in filecoin-ffi/filcrypto.h:136
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGpuDeviceResponse as declared in filecoin-ffi/filcrypto.h:157
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilGpuDeviceResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -208,10 +268,14 @@ type FilGpuDeviceResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilBLSDigest as declared in filecoin-ffi/filcrypto.h:170
 =======
 // FilBLSDigest as declared in filecoin-ffi/filcrypto.h:140
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilBLSDigest as declared in filecoin-ffi/filcrypto.h:161
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilBLSDigest struct {
 	Inner          [96]byte
 	ref215fc78c    *C.fil_BLSDigest
@@ -219,10 +283,14 @@ type FilBLSDigest struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilHashResponse as declared in filecoin-ffi/filcrypto.h:177
 =======
 // FilHashResponse as declared in filecoin-ffi/filcrypto.h:147
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilHashResponse as declared in filecoin-ffi/filcrypto.h:168
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilHashResponse struct {
 	Digest         FilBLSDigest
 	refc52a22ef    *C.fil_HashResponse
@@ -230,10 +298,14 @@ type FilHashResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilInitLogFdResponse as declared in filecoin-ffi/filcrypto.h:182
 =======
 // FilInitLogFdResponse as declared in filecoin-ffi/filcrypto.h:152
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilInitLogFdResponse as declared in filecoin-ffi/filcrypto.h:173
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilInitLogFdResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -242,10 +314,14 @@ type FilInitLogFdResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilBLSPrivateKey as declared in filecoin-ffi/filcrypto.h:186
 =======
 // FilBLSPrivateKey as declared in filecoin-ffi/filcrypto.h:156
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilBLSPrivateKey as declared in filecoin-ffi/filcrypto.h:177
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilBLSPrivateKey struct {
 	Inner          [32]byte
 	ref2f77fe3a    *C.fil_BLSPrivateKey
@@ -253,10 +329,14 @@ type FilBLSPrivateKey struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeyGenerateResponse as declared in filecoin-ffi/filcrypto.h:193
 =======
 // FilPrivateKeyGenerateResponse as declared in filecoin-ffi/filcrypto.h:163
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateKeyGenerateResponse as declared in filecoin-ffi/filcrypto.h:184
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPrivateKeyGenerateResponse struct {
 	PrivateKey    FilBLSPrivateKey
 	ref2dba09f    *C.fil_PrivateKeyGenerateResponse
@@ -264,10 +344,14 @@ type FilPrivateKeyGenerateResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilBLSPublicKey as declared in filecoin-ffi/filcrypto.h:197
 =======
 // FilBLSPublicKey as declared in filecoin-ffi/filcrypto.h:167
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilBLSPublicKey as declared in filecoin-ffi/filcrypto.h:188
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilBLSPublicKey struct {
 	Inner          [48]byte
 	ref6d0cab13    *C.fil_BLSPublicKey
@@ -275,10 +359,14 @@ type FilBLSPublicKey struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeyPublicKeyResponse as declared in filecoin-ffi/filcrypto.h:204
 =======
 // FilPrivateKeyPublicKeyResponse as declared in filecoin-ffi/filcrypto.h:174
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateKeyPublicKeyResponse as declared in filecoin-ffi/filcrypto.h:195
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPrivateKeyPublicKeyResponse struct {
 	PublicKey      FilBLSPublicKey
 	refee14e59d    *C.fil_PrivateKeyPublicKeyResponse
@@ -286,10 +374,14 @@ type FilPrivateKeyPublicKeyResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeySignResponse as declared in filecoin-ffi/filcrypto.h:211
 =======
 // FilPrivateKeySignResponse as declared in filecoin-ffi/filcrypto.h:181
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateKeySignResponse as declared in filecoin-ffi/filcrypto.h:202
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPrivateKeySignResponse struct {
 	Signature      FilBLSSignature
 	refcdf97b28    *C.fil_PrivateKeySignResponse
@@ -297,10 +389,14 @@ type FilPrivateKeySignResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:218
 =======
 // FilSealCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:188
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:209
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilSealCommitPhase1Response struct {
 	StatusCode                FCPResponseStatus
 	ErrorMsg                  string
@@ -311,10 +407,14 @@ type FilSealCommitPhase1Response struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:225
 =======
 // FilSealCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:195
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:216
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilSealCommitPhase2Response struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -325,10 +425,14 @@ type FilSealCommitPhase2Response struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealPreCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:232
 =======
 // FilSealPreCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:202
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealPreCommitPhase1Response as declared in filecoin-ffi/filcrypto.h:223
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilSealPreCommitPhase1Response struct {
 	ErrorMsg                     string
 	StatusCode                   FCPResponseStatus
@@ -339,10 +443,14 @@ type FilSealPreCommitPhase1Response struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealPreCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:240
 =======
 // FilSealPreCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:210
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealPreCommitPhase2Response as declared in filecoin-ffi/filcrypto.h:231
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilSealPreCommitPhase2Response struct {
 	ErrorMsg        string
 	StatusCode      FCPResponseStatus
@@ -354,10 +462,14 @@ type FilSealPreCommitPhase2Response struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilStringResponse as declared in filecoin-ffi/filcrypto.h:249
 =======
 // FilStringResponse as declared in filecoin-ffi/filcrypto.h:219
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilStringResponse as declared in filecoin-ffi/filcrypto.h:240
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilStringResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -367,10 +479,14 @@ type FilStringResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilUnsealRangeResponse as declared in filecoin-ffi/filcrypto.h:254
 =======
 // FilUnsealRangeResponse as declared in filecoin-ffi/filcrypto.h:224
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilUnsealRangeResponse as declared in filecoin-ffi/filcrypto.h:245
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilUnsealRangeResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -379,10 +495,14 @@ type FilUnsealRangeResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifySealResponse as declared in filecoin-ffi/filcrypto.h:260
 =======
 // FilVerifySealResponse as declared in filecoin-ffi/filcrypto.h:230
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilVerifySealResponse as declared in filecoin-ffi/filcrypto.h:251
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilVerifySealResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -392,10 +512,14 @@ type FilVerifySealResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifyWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:266
 =======
 // FilVerifyWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:236
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilVerifyWindowPoStResponse as declared in filecoin-ffi/filcrypto.h:257
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilVerifyWindowPoStResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -405,10 +529,14 @@ type FilVerifyWindowPoStResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifyWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:272
 =======
 // FilVerifyWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:242
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilVerifyWinningPoStResponse as declared in filecoin-ffi/filcrypto.h:263
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilVerifyWinningPoStResponse struct {
 	StatusCode     FCPResponseStatus
 	ErrorMsg       string
@@ -418,10 +546,14 @@ type FilVerifyWinningPoStResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilWriteWithAlignmentResponse as declared in filecoin-ffi/filcrypto.h:280
 =======
 // FilWriteWithAlignmentResponse as declared in filecoin-ffi/filcrypto.h:250
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilWriteWithAlignmentResponse as declared in filecoin-ffi/filcrypto.h:271
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilWriteWithAlignmentResponse struct {
 	CommP                 [32]byte
 	ErrorMsg              string
@@ -433,10 +565,14 @@ type FilWriteWithAlignmentResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilWriteWithoutAlignmentResponse as declared in filecoin-ffi/filcrypto.h:287
 =======
 // FilWriteWithoutAlignmentResponse as declared in filecoin-ffi/filcrypto.h:257
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilWriteWithoutAlignmentResponse as declared in filecoin-ffi/filcrypto.h:278
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilWriteWithoutAlignmentResponse struct {
 	CommP              [32]byte
 	ErrorMsg           string
@@ -447,10 +583,14 @@ type FilWriteWithoutAlignmentResponse struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPublicPieceInfo as declared in filecoin-ffi/filcrypto.h:292
 =======
 // FilPublicPieceInfo as declared in filecoin-ffi/filcrypto.h:262
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPublicPieceInfo as declared in filecoin-ffi/filcrypto.h:283
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPublicPieceInfo struct {
 	NumBytes       uint64
 	CommP          [32]byte
@@ -459,10 +599,14 @@ type FilPublicPieceInfo struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Fil32ByteArray as declared in filecoin-ffi/filcrypto.h:296
 =======
 // Fil32ByteArray as declared in filecoin-ffi/filcrypto.h:266
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// Fil32ByteArray as declared in filecoin-ffi/filcrypto.h:287
+>>>>>>> d1f84bb (run the make cgo-gen)
 type Fil32ByteArray struct {
 	Inner          [32]byte
 	ref373ec61a    *C.fil_32ByteArray
@@ -470,10 +614,14 @@ type Fil32ByteArray struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateReplicaInfo as declared in filecoin-ffi/filcrypto.h:304
 =======
 // FilPrivateReplicaInfo as declared in filecoin-ffi/filcrypto.h:274
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateReplicaInfo as declared in filecoin-ffi/filcrypto.h:295
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPrivateReplicaInfo struct {
 	RegisteredProof FilRegisteredPoStProof
 	CacheDirPath    string
@@ -485,10 +633,14 @@ type FilPrivateReplicaInfo struct {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPublicReplicaInfo as declared in filecoin-ffi/filcrypto.h:310
 =======
 // FilPublicReplicaInfo as declared in filecoin-ffi/filcrypto.h:280
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPublicReplicaInfo as declared in filecoin-ffi/filcrypto.h:301
+>>>>>>> d1f84bb (run the make cgo-gen)
 type FilPublicReplicaInfo struct {
 	RegisteredProof FilRegisteredPoStProof
 	CommR           [32]byte

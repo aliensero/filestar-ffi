@@ -17,11 +17,15 @@ import (
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilAggregate function as declared in filecoin-ffi/filcrypto.h:322
 func FilAggregate(flattenedSignaturesPtr []byte, flattenedSignaturesLen uint) *FilAggregateResponse {
 	cflattenedSignaturesPtr, cflattenedSignaturesPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&flattenedSignaturesPtr)))
 =======
 // FilAggregate function as declared in filecoin-ffi/filcrypto.h:292
+=======
+// FilAggregate function as declared in filecoin-ffi/filcrypto.h:313
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilAggregate(flattenedSignaturesPtr string, flattenedSignaturesLen uint) *FilAggregateResponse {
 	flattenedSignaturesPtr = safeString(flattenedSignaturesPtr)
 	cflattenedSignaturesPtr, cflattenedSignaturesPtrAllocMap := unpackPUint8TString(flattenedSignaturesPtr)
@@ -35,10 +39,14 @@ func FilAggregate(flattenedSignaturesPtr string, flattenedSignaturesLen uint) *F
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilClearCache function as declared in filecoin-ffi/filcrypto.h:325
 =======
 // FilClearCache function as declared in filecoin-ffi/filcrypto.h:295
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilClearCache function as declared in filecoin-ffi/filcrypto.h:316
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilClearCache(sectorSize uint64, cacheDirPath string) *FilClearCacheResponse {
 	csectorSize, csectorSizeAllocMap := (C.uint64_t)(sectorSize), cgoAllocsUnknown
 	cacheDirPath = safeString(cacheDirPath)
@@ -52,6 +60,7 @@ func FilClearCache(sectorSize uint64, cacheDirPath string) *FilClearCacheRespons
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilCreateZeroSignature function as declared in filecoin-ffi/filcrypto.h:332
 func FilCreateZeroSignature() *FilZeroSignatureResponse {
 	__ret := C.fil_create_zero_signature()
@@ -63,6 +72,9 @@ func FilCreateZeroSignature() *FilZeroSignatureResponse {
 =======
 // FilDestroyAggregateResponse function as declared in filecoin-ffi/filcrypto.h:297
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyAggregateResponse function as declared in filecoin-ffi/filcrypto.h:318
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyAggregateResponse(ptr *FilAggregateResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_aggregate_response(cptr)
@@ -70,10 +82,14 @@ func FilDestroyAggregateResponse(ptr *FilAggregateResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyClearCacheResponse function as declared in filecoin-ffi/filcrypto.h:336
 =======
 // FilDestroyClearCacheResponse function as declared in filecoin-ffi/filcrypto.h:299
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyClearCacheResponse function as declared in filecoin-ffi/filcrypto.h:320
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyClearCacheResponse(ptr *FilClearCacheResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_clear_cache_response(cptr)
@@ -81,10 +97,14 @@ func FilDestroyClearCacheResponse(ptr *FilClearCacheResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyFauxrepResponse function as declared in filecoin-ffi/filcrypto.h:338
 =======
 // FilDestroyFauxrepResponse function as declared in filecoin-ffi/filcrypto.h:301
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyFauxrepResponse function as declared in filecoin-ffi/filcrypto.h:322
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyFauxrepResponse(ptr *FilFauxRepResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_fauxrep_response(cptr)
@@ -92,10 +112,14 @@ func FilDestroyFauxrepResponse(ptr *FilFauxRepResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyFinalizeTicketResponse function as declared in filecoin-ffi/filcrypto.h:340
 =======
 // FilDestroyFinalizeTicketResponse function as declared in filecoin-ffi/filcrypto.h:303
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyFinalizeTicketResponse function as declared in filecoin-ffi/filcrypto.h:324
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyFinalizeTicketResponse(ptr *FilFinalizeTicketResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_finalize_ticket_response(cptr)
@@ -103,10 +127,14 @@ func FilDestroyFinalizeTicketResponse(ptr *FilFinalizeTicketResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGenerateDataCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:342
 =======
 // FilDestroyGenerateDataCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:305
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGenerateDataCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:326
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateDataCommitmentResponse(ptr *FilGenerateDataCommitmentResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_data_commitment_response(cptr)
@@ -114,17 +142,25 @@ func FilDestroyGenerateDataCommitmentResponse(ptr *FilGenerateDataCommitmentResp
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGenerateFallbackSectorChallengesResponse function as declared in filecoin-ffi/filcrypto.h:344
+=======
+// FilDestroyGenerateFallbackSectorChallengesResponse function as declared in filecoin-ffi/filcrypto.h:328
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateFallbackSectorChallengesResponse(ptr *FilGenerateFallbackSectorChallengesResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_fallback_sector_challenges_response(cptr)
 	runtime.KeepAlive(cptrAllocMap)
 }
 
+<<<<<<< HEAD
 // FilDestroyGeneratePieceCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:346
 =======
 // FilDestroyGeneratePieceCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:307
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGeneratePieceCommitmentResponse function as declared in filecoin-ffi/filcrypto.h:330
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGeneratePieceCommitmentResponse(ptr *FilGeneratePieceCommitmentResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_piece_commitment_response(cptr)
@@ -132,17 +168,25 @@ func FilDestroyGeneratePieceCommitmentResponse(ptr *FilGeneratePieceCommitmentRe
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGenerateSingleVanillaProofResponse function as declared in filecoin-ffi/filcrypto.h:348
+=======
+// FilDestroyGenerateSingleVanillaProofResponse function as declared in filecoin-ffi/filcrypto.h:332
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateSingleVanillaProofResponse(ptr *FilGenerateSingleVanillaProofResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_single_vanilla_proof_response(cptr)
 	runtime.KeepAlive(cptrAllocMap)
 }
 
+<<<<<<< HEAD
 // FilDestroyGenerateWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:350
 =======
 // FilDestroyGenerateWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:309
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGenerateWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:334
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateWindowPostResponse(ptr *FilGenerateWindowPoStResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_window_post_response(cptr)
@@ -150,10 +194,14 @@ func FilDestroyGenerateWindowPostResponse(ptr *FilGenerateWindowPoStResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGenerateWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:352
 =======
 // FilDestroyGenerateWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:311
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGenerateWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:336
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateWinningPostResponse(ptr *FilGenerateWinningPoStResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_winning_post_response(cptr)
@@ -161,10 +209,14 @@ func FilDestroyGenerateWinningPostResponse(ptr *FilGenerateWinningPoStResponse) 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:354
 =======
 // FilDestroyGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:313
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:338
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGenerateWinningPostSectorChallenge(ptr *FilGenerateWinningPoStSectorChallenge) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_generate_winning_post_sector_challenge(cptr)
@@ -172,10 +224,14 @@ func FilDestroyGenerateWinningPostSectorChallenge(ptr *FilGenerateWinningPoStSec
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyGpuDeviceResponse function as declared in filecoin-ffi/filcrypto.h:356
 =======
 // FilDestroyGpuDeviceResponse function as declared in filecoin-ffi/filcrypto.h:315
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyGpuDeviceResponse function as declared in filecoin-ffi/filcrypto.h:340
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyGpuDeviceResponse(ptr *FilGpuDeviceResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_gpu_device_response(cptr)
@@ -183,10 +239,14 @@ func FilDestroyGpuDeviceResponse(ptr *FilGpuDeviceResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyHashResponse function as declared in filecoin-ffi/filcrypto.h:358
 =======
 // FilDestroyHashResponse function as declared in filecoin-ffi/filcrypto.h:317
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyHashResponse function as declared in filecoin-ffi/filcrypto.h:342
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyHashResponse(ptr *FilHashResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_hash_response(cptr)
@@ -194,10 +254,14 @@ func FilDestroyHashResponse(ptr *FilHashResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyInitLogFdResponse function as declared in filecoin-ffi/filcrypto.h:360
 =======
 // FilDestroyInitLogFdResponse function as declared in filecoin-ffi/filcrypto.h:319
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyInitLogFdResponse function as declared in filecoin-ffi/filcrypto.h:344
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyInitLogFdResponse(ptr *FilInitLogFdResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_init_log_fd_response(cptr)
@@ -205,10 +269,14 @@ func FilDestroyInitLogFdResponse(ptr *FilInitLogFdResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyPrivateKeyGenerateResponse function as declared in filecoin-ffi/filcrypto.h:362
 =======
 // FilDestroyPrivateKeyGenerateResponse function as declared in filecoin-ffi/filcrypto.h:321
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyPrivateKeyGenerateResponse function as declared in filecoin-ffi/filcrypto.h:346
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyPrivateKeyGenerateResponse(ptr *FilPrivateKeyGenerateResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_private_key_generate_response(cptr)
@@ -216,10 +284,14 @@ func FilDestroyPrivateKeyGenerateResponse(ptr *FilPrivateKeyGenerateResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyPrivateKeyPublicKeyResponse function as declared in filecoin-ffi/filcrypto.h:364
 =======
 // FilDestroyPrivateKeyPublicKeyResponse function as declared in filecoin-ffi/filcrypto.h:323
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyPrivateKeyPublicKeyResponse function as declared in filecoin-ffi/filcrypto.h:348
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyPrivateKeyPublicKeyResponse(ptr *FilPrivateKeyPublicKeyResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_private_key_public_key_response(cptr)
@@ -227,10 +299,14 @@ func FilDestroyPrivateKeyPublicKeyResponse(ptr *FilPrivateKeyPublicKeyResponse) 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyPrivateKeySignResponse function as declared in filecoin-ffi/filcrypto.h:366
 =======
 // FilDestroyPrivateKeySignResponse function as declared in filecoin-ffi/filcrypto.h:325
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyPrivateKeySignResponse function as declared in filecoin-ffi/filcrypto.h:350
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyPrivateKeySignResponse(ptr *FilPrivateKeySignResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_private_key_sign_response(cptr)
@@ -238,10 +314,14 @@ func FilDestroyPrivateKeySignResponse(ptr *FilPrivateKeySignResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroySealCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:368
 =======
 // FilDestroySealCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:327
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroySealCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:352
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroySealCommitPhase1Response(ptr *FilSealCommitPhase1Response) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_seal_commit_phase1_response(cptr)
@@ -249,10 +329,14 @@ func FilDestroySealCommitPhase1Response(ptr *FilSealCommitPhase1Response) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroySealCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:370
 =======
 // FilDestroySealCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:329
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroySealCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:354
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroySealCommitPhase2Response(ptr *FilSealCommitPhase2Response) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_seal_commit_phase2_response(cptr)
@@ -260,10 +344,14 @@ func FilDestroySealCommitPhase2Response(ptr *FilSealCommitPhase2Response) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroySealPreCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:372
 =======
 // FilDestroySealPreCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:331
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroySealPreCommitPhase1Response function as declared in filecoin-ffi/filcrypto.h:356
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroySealPreCommitPhase1Response(ptr *FilSealPreCommitPhase1Response) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_seal_pre_commit_phase1_response(cptr)
@@ -271,10 +359,14 @@ func FilDestroySealPreCommitPhase1Response(ptr *FilSealPreCommitPhase1Response) 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroySealPreCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:374
 =======
 // FilDestroySealPreCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:333
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroySealPreCommitPhase2Response function as declared in filecoin-ffi/filcrypto.h:358
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroySealPreCommitPhase2Response(ptr *FilSealPreCommitPhase2Response) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_seal_pre_commit_phase2_response(cptr)
@@ -282,10 +374,14 @@ func FilDestroySealPreCommitPhase2Response(ptr *FilSealPreCommitPhase2Response) 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyStringResponse function as declared in filecoin-ffi/filcrypto.h:376
 =======
 // FilDestroyStringResponse function as declared in filecoin-ffi/filcrypto.h:335
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyStringResponse function as declared in filecoin-ffi/filcrypto.h:360
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyStringResponse(ptr *FilStringResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_string_response(cptr)
@@ -293,10 +389,14 @@ func FilDestroyStringResponse(ptr *FilStringResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyUnsealRangeResponse function as declared in filecoin-ffi/filcrypto.h:378
 =======
 // FilDestroyUnsealRangeResponse function as declared in filecoin-ffi/filcrypto.h:337
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyUnsealRangeResponse function as declared in filecoin-ffi/filcrypto.h:362
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyUnsealRangeResponse(ptr *FilUnsealRangeResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_unseal_range_response(cptr)
@@ -304,10 +404,14 @@ func FilDestroyUnsealRangeResponse(ptr *FilUnsealRangeResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyVerifySealResponse function as declared in filecoin-ffi/filcrypto.h:384
 =======
 // FilDestroyVerifySealResponse function as declared in filecoin-ffi/filcrypto.h:343
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyVerifySealResponse function as declared in filecoin-ffi/filcrypto.h:368
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyVerifySealResponse(ptr *FilVerifySealResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_verify_seal_response(cptr)
@@ -315,10 +419,14 @@ func FilDestroyVerifySealResponse(ptr *FilVerifySealResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyVerifyWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:386
 =======
 // FilDestroyVerifyWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:345
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyVerifyWindowPostResponse function as declared in filecoin-ffi/filcrypto.h:370
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyVerifyWindowPostResponse(ptr *FilVerifyWindowPoStResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_verify_window_post_response(cptr)
@@ -326,10 +434,14 @@ func FilDestroyVerifyWindowPostResponse(ptr *FilVerifyWindowPoStResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyVerifyWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:392
 =======
 // FilDestroyVerifyWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:351
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyVerifyWinningPostResponse function as declared in filecoin-ffi/filcrypto.h:376
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyVerifyWinningPostResponse(ptr *FilVerifyWinningPoStResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_verify_winning_post_response(cptr)
@@ -337,10 +449,14 @@ func FilDestroyVerifyWinningPostResponse(ptr *FilVerifyWinningPoStResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyWriteWithAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:394
 =======
 // FilDestroyWriteWithAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:353
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyWriteWithAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:378
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyWriteWithAlignmentResponse(ptr *FilWriteWithAlignmentResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_write_with_alignment_response(cptr)
@@ -348,16 +464,21 @@ func FilDestroyWriteWithAlignmentResponse(ptr *FilWriteWithAlignmentResponse) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilDestroyWriteWithoutAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:396
 =======
 // FilDestroyWriteWithoutAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:355
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilDestroyWriteWithoutAlignmentResponse function as declared in filecoin-ffi/filcrypto.h:380
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilDestroyWriteWithoutAlignmentResponse(ptr *FilWriteWithoutAlignmentResponse) {
 	cptr, cptrAllocMap := ptr.PassRef()
 	C.fil_destroy_write_without_alignment_response(cptr)
 	runtime.KeepAlive(cptrAllocMap)
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // FilDestroyZeroSignatureResponse function as declared in filecoin-ffi/filcrypto.h:398
 func FilDestroyZeroSignatureResponse(ptr *FilZeroSignatureResponse) {
@@ -377,6 +498,9 @@ func FilDropSignature(sig []byte) {
 =======
 // FilFauxrep function as declared in filecoin-ffi/filcrypto.h:357
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilFauxrep function as declared in filecoin-ffi/filcrypto.h:382
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilFauxrep(registeredProof FilRegisteredSealProof, cacheDirPath string, sealedSectorPath string) *FilFauxRepResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cacheDirPath = safeString(cacheDirPath)
@@ -394,10 +518,14 @@ func FilFauxrep(registeredProof FilRegisteredSealProof, cacheDirPath string, sea
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilFauxrep2 function as declared in filecoin-ffi/filcrypto.h:409
 =======
 // FilFauxrep2 function as declared in filecoin-ffi/filcrypto.h:361
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilFauxrep2 function as declared in filecoin-ffi/filcrypto.h:386
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilFauxrep2(registeredProof FilRegisteredSealProof, cacheDirPath string, existingPAuxPath string) *FilFauxRepResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cacheDirPath = safeString(cacheDirPath)
@@ -415,10 +543,14 @@ func FilFauxrep2(registeredProof FilRegisteredSealProof, cacheDirPath string, ex
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateDataCommitment function as declared in filecoin-ffi/filcrypto.h:416
 =======
 // FilGenerateDataCommitment function as declared in filecoin-ffi/filcrypto.h:368
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateDataCommitment function as declared in filecoin-ffi/filcrypto.h:393
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateDataCommitment(registeredProof FilRegisteredSealProof, piecesPtr []FilPublicPieceInfo, piecesLen uint) *FilGenerateDataCommitmentResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cpiecesPtr, cpiecesPtrAllocMap := unpackArgSFilPublicPieceInfo(piecesPtr)
@@ -433,7 +565,11 @@ func FilGenerateDataCommitment(registeredProof FilRegisteredSealProof, piecesPtr
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateFallbackSectorChallenges function as declared in filecoin-ffi/filcrypto.h:424
+=======
+// FilGenerateFallbackSectorChallenges function as declared in filecoin-ffi/filcrypto.h:401
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateFallbackSectorChallenges(registeredProof FilRegisteredPoStProof, randomness Fil32ByteArray, sectorIdsPtr []uint64, sectorIdsLen uint, proverId Fil32ByteArray) *FilGenerateFallbackSectorChallengesResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	crandomness, crandomnessAllocMap := randomness.PassValue()
@@ -450,10 +586,14 @@ func FilGenerateFallbackSectorChallenges(registeredProof FilRegisteredPoStProof,
 	return __v
 }
 
+<<<<<<< HEAD
 // FilGeneratePieceCommitment function as declared in filecoin-ffi/filcrypto.h:434
 =======
 // FilGeneratePieceCommitment function as declared in filecoin-ffi/filcrypto.h:376
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGeneratePieceCommitment function as declared in filecoin-ffi/filcrypto.h:411
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGeneratePieceCommitment(registeredProof FilRegisteredSealProof, pieceFdRaw int32, unpaddedPieceSize uint64) *FilGeneratePieceCommitmentResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cpieceFdRaw, cpieceFdRawAllocMap := (C.int)(pieceFdRaw), cgoAllocsUnknown
@@ -467,7 +607,11 @@ func FilGeneratePieceCommitment(registeredProof FilRegisteredSealProof, pieceFdR
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateSingleVanillaProof function as declared in filecoin-ffi/filcrypto.h:442
+=======
+// FilGenerateSingleVanillaProof function as declared in filecoin-ffi/filcrypto.h:419
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateSingleVanillaProof(replica FilPrivateReplicaInfo, challengesPtr []uint64, challengesLen uint) *FilGenerateSingleVanillaProofResponse {
 	creplica, creplicaAllocMap := replica.PassValue()
 	cchallengesPtr, cchallengesPtrAllocMap := copyPUint64TBytes((*sliceHeader)(unsafe.Pointer(&challengesPtr)))
@@ -480,10 +624,14 @@ func FilGenerateSingleVanillaProof(replica FilPrivateReplicaInfo, challengesPtr 
 	return __v
 }
 
+<<<<<<< HEAD
 // FilGenerateWindowPost function as declared in filecoin-ffi/filcrypto.h:450
 =======
 // FilGenerateWindowPost function as declared in filecoin-ffi/filcrypto.h:384
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWindowPost function as declared in filecoin-ffi/filcrypto.h:427
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateWindowPost(randomness Fil32ByteArray, replicasPtr []FilPrivateReplicaInfo, replicasLen uint, proverId Fil32ByteArray) *FilGenerateWindowPoStResponse {
 	crandomness, crandomnessAllocMap := randomness.PassValue()
 	creplicasPtr, creplicasPtrAllocMap := unpackArgSFilPrivateReplicaInfo(replicasPtr)
@@ -500,7 +648,11 @@ func FilGenerateWindowPost(randomness Fil32ByteArray, replicasPtr []FilPrivateRe
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWindowPostWithVanilla function as declared in filecoin-ffi/filcrypto.h:459
+=======
+// FilGenerateWindowPostWithVanilla function as declared in filecoin-ffi/filcrypto.h:436
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateWindowPostWithVanilla(registeredProof FilRegisteredPoStProof, randomness Fil32ByteArray, proverId Fil32ByteArray, vanillaProofsPtr []FilVanillaProof, vanillaProofsLen uint) *FilGenerateWindowPoStResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	crandomness, crandomnessAllocMap := randomness.PassValue()
@@ -518,10 +670,14 @@ func FilGenerateWindowPostWithVanilla(registeredProof FilRegisteredPoStProof, ra
 	return __v
 }
 
+<<<<<<< HEAD
 // FilGenerateWinningPost function as declared in filecoin-ffi/filcrypto.h:469
 =======
 // FilGenerateWinningPost function as declared in filecoin-ffi/filcrypto.h:393
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWinningPost function as declared in filecoin-ffi/filcrypto.h:446
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateWinningPost(randomness Fil32ByteArray, replicasPtr []FilPrivateReplicaInfo, replicasLen uint, proverId Fil32ByteArray) *FilGenerateWinningPoStResponse {
 	crandomness, crandomnessAllocMap := randomness.PassValue()
 	creplicasPtr, creplicasPtrAllocMap := unpackArgSFilPrivateReplicaInfo(replicasPtr)
@@ -538,10 +694,14 @@ func FilGenerateWinningPost(randomness Fil32ByteArray, replicasPtr []FilPrivateR
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:478
 =======
 // FilGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:402
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGenerateWinningPostSectorChallenge function as declared in filecoin-ffi/filcrypto.h:455
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateWinningPostSectorChallenge(registeredProof FilRegisteredPoStProof, randomness Fil32ByteArray, sectorSetLen uint64, proverId Fil32ByteArray) *FilGenerateWinningPoStSectorChallenge {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	crandomness, crandomnessAllocMap := randomness.PassValue()
@@ -557,7 +717,11 @@ func FilGenerateWinningPostSectorChallenge(registeredProof FilRegisteredPoStProo
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGenerateWinningPostWithVanilla function as declared in filecoin-ffi/filcrypto.h:487
+=======
+// FilGenerateWinningPostWithVanilla function as declared in filecoin-ffi/filcrypto.h:464
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGenerateWinningPostWithVanilla(registeredProof FilRegisteredPoStProof, randomness Fil32ByteArray, proverId Fil32ByteArray, vanillaProofsPtr []FilVanillaProof, vanillaProofsLen uint) *FilGenerateWinningPoStResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	crandomness, crandomnessAllocMap := randomness.PassValue()
@@ -575,10 +739,14 @@ func FilGenerateWinningPostWithVanilla(registeredProof FilRegisteredPoStProof, r
 	return __v
 }
 
+<<<<<<< HEAD
 // FilGetGpuDevices function as declared in filecoin-ffi/filcrypto.h:496
 =======
 // FilGetGpuDevices function as declared in filecoin-ffi/filcrypto.h:410
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetGpuDevices function as declared in filecoin-ffi/filcrypto.h:473
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetGpuDevices() *FilGpuDeviceResponse {
 	__ret := C.fil_get_gpu_devices()
 	__v := NewFilGpuDeviceResponseRef(unsafe.Pointer(__ret))
@@ -586,10 +754,14 @@ func FilGetGpuDevices() *FilGpuDeviceResponse {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetMaxUserBytesPerStagedSector function as declared in filecoin-ffi/filcrypto.h:502
 =======
 // FilGetMaxUserBytesPerStagedSector function as declared in filecoin-ffi/filcrypto.h:416
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetMaxUserBytesPerStagedSector function as declared in filecoin-ffi/filcrypto.h:479
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetMaxUserBytesPerStagedSector(registeredProof FilRegisteredSealProof) uint64 {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_max_user_bytes_per_staged_sector(cregisteredProof)
@@ -599,10 +771,14 @@ func FilGetMaxUserBytesPerStagedSector(registeredProof FilRegisteredSealProof) u
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:508
 =======
 // FilGetPostCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:422
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:485
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostCircuitIdentifier(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_circuit_identifier(cregisteredProof)
@@ -612,10 +788,14 @@ func FilGetPostCircuitIdentifier(registeredProof FilRegisteredPoStProof) *FilStr
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostParamsCid function as declared in filecoin-ffi/filcrypto.h:514
 =======
 // FilGetPostParamsCid function as declared in filecoin-ffi/filcrypto.h:428
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostParamsCid function as declared in filecoin-ffi/filcrypto.h:491
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostParamsCid(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_params_cid(cregisteredProof)
@@ -625,10 +805,14 @@ func FilGetPostParamsCid(registeredProof FilRegisteredPoStProof) *FilStringRespo
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostParamsPath function as declared in filecoin-ffi/filcrypto.h:521
 =======
 // FilGetPostParamsPath function as declared in filecoin-ffi/filcrypto.h:435
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostParamsPath function as declared in filecoin-ffi/filcrypto.h:498
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostParamsPath(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_params_path(cregisteredProof)
@@ -638,10 +822,14 @@ func FilGetPostParamsPath(registeredProof FilRegisteredPoStProof) *FilStringResp
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:527
 =======
 // FilGetPostVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:441
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:504
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostVerifyingKeyCid(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_verifying_key_cid(cregisteredProof)
@@ -651,10 +839,14 @@ func FilGetPostVerifyingKeyCid(registeredProof FilRegisteredPoStProof) *FilStrin
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:534
 =======
 // FilGetPostVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:448
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:511
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostVerifyingKeyPath(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_verifying_key_path(cregisteredProof)
@@ -664,10 +856,14 @@ func FilGetPostVerifyingKeyPath(registeredProof FilRegisteredPoStProof) *FilStri
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetPostVersion function as declared in filecoin-ffi/filcrypto.h:540
 =======
 // FilGetPostVersion function as declared in filecoin-ffi/filcrypto.h:454
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetPostVersion function as declared in filecoin-ffi/filcrypto.h:517
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetPostVersion(registeredProof FilRegisteredPoStProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredPoStProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_post_version(cregisteredProof)
@@ -677,10 +873,14 @@ func FilGetPostVersion(registeredProof FilRegisteredPoStProof) *FilStringRespons
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:546
 =======
 // FilGetSealCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:460
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealCircuitIdentifier function as declared in filecoin-ffi/filcrypto.h:523
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealCircuitIdentifier(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_circuit_identifier(cregisteredProof)
@@ -690,10 +890,14 @@ func FilGetSealCircuitIdentifier(registeredProof FilRegisteredSealProof) *FilStr
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealParamsCid function as declared in filecoin-ffi/filcrypto.h:552
 =======
 // FilGetSealParamsCid function as declared in filecoin-ffi/filcrypto.h:466
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealParamsCid function as declared in filecoin-ffi/filcrypto.h:529
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealParamsCid(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_params_cid(cregisteredProof)
@@ -703,10 +907,14 @@ func FilGetSealParamsCid(registeredProof FilRegisteredSealProof) *FilStringRespo
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealParamsPath function as declared in filecoin-ffi/filcrypto.h:559
 =======
 // FilGetSealParamsPath function as declared in filecoin-ffi/filcrypto.h:473
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealParamsPath function as declared in filecoin-ffi/filcrypto.h:536
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealParamsPath(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_params_path(cregisteredProof)
@@ -716,10 +924,14 @@ func FilGetSealParamsPath(registeredProof FilRegisteredSealProof) *FilStringResp
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:565
 =======
 // FilGetSealVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:479
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealVerifyingKeyCid function as declared in filecoin-ffi/filcrypto.h:542
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealVerifyingKeyCid(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_verifying_key_cid(cregisteredProof)
@@ -729,10 +941,14 @@ func FilGetSealVerifyingKeyCid(registeredProof FilRegisteredSealProof) *FilStrin
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:572
 =======
 // FilGetSealVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:486
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealVerifyingKeyPath function as declared in filecoin-ffi/filcrypto.h:549
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealVerifyingKeyPath(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_verifying_key_path(cregisteredProof)
@@ -742,10 +958,14 @@ func FilGetSealVerifyingKeyPath(registeredProof FilRegisteredSealProof) *FilStri
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilGetSealVersion function as declared in filecoin-ffi/filcrypto.h:578
 =======
 // FilGetSealVersion function as declared in filecoin-ffi/filcrypto.h:492
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilGetSealVersion function as declared in filecoin-ffi/filcrypto.h:555
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilGetSealVersion(registeredProof FilRegisteredSealProof) *FilStringResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	__ret := C.fil_get_seal_version(cregisteredProof)
@@ -755,11 +975,15 @@ func FilGetSealVersion(registeredProof FilRegisteredSealProof) *FilStringRespons
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilHash function as declared in filecoin-ffi/filcrypto.h:588
 func FilHash(messagePtr []byte, messageLen uint) *FilHashResponse {
 	cmessagePtr, cmessagePtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&messagePtr)))
 =======
 // FilHash function as declared in filecoin-ffi/filcrypto.h:502
+=======
+// FilHash function as declared in filecoin-ffi/filcrypto.h:565
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilHash(messagePtr string, messageLen uint) *FilHashResponse {
 	messagePtr = safeString(messagePtr)
 	cmessagePtr, cmessagePtrAllocMap := unpackPUint8TString(messagePtr)
@@ -773,12 +997,16 @@ func FilHash(messagePtr string, messageLen uint) *FilHashResponse {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilHashVerify function as declared in filecoin-ffi/filcrypto.h:602
 func FilHashVerify(signaturePtr []byte, flattenedMessagesPtr []byte, flattenedMessagesLen uint, messageSizesPtr []uint, messageSizesLen uint, flattenedPublicKeysPtr []byte, flattenedPublicKeysLen uint) int32 {
 	csignaturePtr, csignaturePtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&signaturePtr)))
 	cflattenedMessagesPtr, cflattenedMessagesPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&flattenedMessagesPtr)))
 =======
 // FilHashVerify function as declared in filecoin-ffi/filcrypto.h:516
+=======
+// FilHashVerify function as declared in filecoin-ffi/filcrypto.h:579
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilHashVerify(signaturePtr string, flattenedMessagesPtr string, flattenedMessagesLen uint, messageSizesPtr []uint, messageSizesLen uint, flattenedPublicKeysPtr string, flattenedPublicKeysLen uint) int32 {
 	signaturePtr = safeString(signaturePtr)
 	csignaturePtr, csignaturePtrAllocMap := unpackPUint8TString(signaturePtr)
@@ -803,10 +1031,14 @@ func FilHashVerify(signaturePtr string, flattenedMessagesPtr string, flattenedMe
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilInitLogFd function as declared in filecoin-ffi/filcrypto.h:619
 =======
 // FilInitLogFd function as declared in filecoin-ffi/filcrypto.h:533
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilInitLogFd function as declared in filecoin-ffi/filcrypto.h:596
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilInitLogFd(logFd int32) *FilInitLogFdResponse {
 	clogFd, clogFdAllocMap := (C.int)(logFd), cgoAllocsUnknown
 	__ret := C.fil_init_log_fd(clogFd)
@@ -816,10 +1048,14 @@ func FilInitLogFd(logFd int32) *FilInitLogFdResponse {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeyGenerate function as declared in filecoin-ffi/filcrypto.h:624
 =======
 // FilPrivateKeyGenerate function as declared in filecoin-ffi/filcrypto.h:538
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateKeyGenerate function as declared in filecoin-ffi/filcrypto.h:601
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilPrivateKeyGenerate() *FilPrivateKeyGenerateResponse {
 	__ret := C.fil_private_key_generate()
 	__v := NewFilPrivateKeyGenerateResponseRef(unsafe.Pointer(__ret))
@@ -827,10 +1063,14 @@ func FilPrivateKeyGenerate() *FilPrivateKeyGenerateResponse {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeyGenerateWithSeed function as declared in filecoin-ffi/filcrypto.h:637
 =======
 // FilPrivateKeyGenerateWithSeed function as declared in filecoin-ffi/filcrypto.h:551
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilPrivateKeyGenerateWithSeed function as declared in filecoin-ffi/filcrypto.h:614
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilPrivateKeyGenerateWithSeed(rawSeed Fil32ByteArray) *FilPrivateKeyGenerateResponse {
 	crawSeed, crawSeedAllocMap := rawSeed.PassValue()
 	__ret := C.fil_private_key_generate_with_seed(crawSeed)
@@ -840,11 +1080,15 @@ func FilPrivateKeyGenerateWithSeed(rawSeed Fil32ByteArray) *FilPrivateKeyGenerat
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeyPublicKey function as declared in filecoin-ffi/filcrypto.h:648
 func FilPrivateKeyPublicKey(rawPrivateKeyPtr []byte) *FilPrivateKeyPublicKeyResponse {
 	crawPrivateKeyPtr, crawPrivateKeyPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&rawPrivateKeyPtr)))
 =======
 // FilPrivateKeyPublicKey function as declared in filecoin-ffi/filcrypto.h:562
+=======
+// FilPrivateKeyPublicKey function as declared in filecoin-ffi/filcrypto.h:625
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilPrivateKeyPublicKey(rawPrivateKeyPtr string) *FilPrivateKeyPublicKeyResponse {
 	rawPrivateKeyPtr = safeString(rawPrivateKeyPtr)
 	crawPrivateKeyPtr, crawPrivateKeyPtrAllocMap := unpackPUint8TString(rawPrivateKeyPtr)
@@ -856,12 +1100,16 @@ func FilPrivateKeyPublicKey(rawPrivateKeyPtr string) *FilPrivateKeyPublicKeyResp
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilPrivateKeySign function as declared in filecoin-ffi/filcrypto.h:661
 func FilPrivateKeySign(rawPrivateKeyPtr []byte, messagePtr []byte, messageLen uint) *FilPrivateKeySignResponse {
 	crawPrivateKeyPtr, crawPrivateKeyPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&rawPrivateKeyPtr)))
 	cmessagePtr, cmessagePtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&messagePtr)))
 =======
 // FilPrivateKeySign function as declared in filecoin-ffi/filcrypto.h:575
+=======
+// FilPrivateKeySign function as declared in filecoin-ffi/filcrypto.h:638
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilPrivateKeySign(rawPrivateKeyPtr string, messagePtr string, messageLen uint) *FilPrivateKeySignResponse {
 	rawPrivateKeyPtr = safeString(rawPrivateKeyPtr)
 	crawPrivateKeyPtr, crawPrivateKeyPtrAllocMap := unpackPUint8TString(rawPrivateKeyPtr)
@@ -878,10 +1126,14 @@ func FilPrivateKeySign(rawPrivateKeyPtr string, messagePtr string, messageLen ui
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:669
 =======
 // FilSealCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:583
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:646
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilSealCommitPhase1(registeredProof FilRegisteredSealProof, commR Fil32ByteArray, commD Fil32ByteArray, cacheDirPath string, replicaPath string, sectorId uint64, proverId Fil32ByteArray, ticket Fil32ByteArray, seed Fil32ByteArray, piecesPtr []FilPublicPieceInfo, piecesLen uint) *FilSealCommitPhase1Response {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	ccommR, ccommRAllocMap := commR.PassValue()
@@ -916,11 +1168,15 @@ func FilSealCommitPhase1(registeredProof FilRegisteredSealProof, commR Fil32Byte
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:681
 func FilSealCommitPhase2(sealCommitPhase1OutputPtr []byte, sealCommitPhase1OutputLen uint, sectorId uint64, proverId Fil32ByteArray) *FilSealCommitPhase2Response {
 	csealCommitPhase1OutputPtr, csealCommitPhase1OutputPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&sealCommitPhase1OutputPtr)))
 =======
 // FilSealCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:595
+=======
+// FilSealCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:658
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilSealCommitPhase2(sealCommitPhase1OutputPtr string, sealCommitPhase1OutputLen uint, sectorId uint64, proverId Fil32ByteArray) *FilSealCommitPhase2Response {
 	sealCommitPhase1OutputPtr = safeString(sealCommitPhase1OutputPtr)
 	csealCommitPhase1OutputPtr, csealCommitPhase1OutputPtrAllocMap := unpackPUint8TString(sealCommitPhase1OutputPtr)
@@ -938,10 +1194,14 @@ func FilSealCommitPhase2(sealCommitPhase1OutputPtr string, sealCommitPhase1Outpu
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealPreCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:690
 =======
 // FilSealPreCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:604
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilSealPreCommitPhase1 function as declared in filecoin-ffi/filcrypto.h:667
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilSealPreCommitPhase1(registeredProof FilRegisteredSealProof, cacheDirPath string, stagedSectorPath string, sealedSectorPath string, sectorId uint64, proverId Fil32ByteArray, ticket Fil32ByteArray, piecesPtr []FilPublicPieceInfo, piecesLen uint) *FilSealPreCommitPhase1Response {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cacheDirPath = safeString(cacheDirPath)
@@ -974,11 +1234,15 @@ func FilSealPreCommitPhase1(registeredProof FilRegisteredSealProof, cacheDirPath
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilSealPreCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:704
 func FilSealPreCommitPhase2(sealPreCommitPhase1OutputPtr []byte, sealPreCommitPhase1OutputLen uint, cacheDirPath string, sealedSectorPath string) *FilSealPreCommitPhase2Response {
 	csealPreCommitPhase1OutputPtr, csealPreCommitPhase1OutputPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&sealPreCommitPhase1OutputPtr)))
 =======
 // FilSealPreCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:618
+=======
+// FilSealPreCommitPhase2 function as declared in filecoin-ffi/filcrypto.h:681
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilSealPreCommitPhase2(sealPreCommitPhase1OutputPtr string, sealPreCommitPhase1OutputLen uint, cacheDirPath string, sealedSectorPath string) *FilSealPreCommitPhase2Response {
 	sealPreCommitPhase1OutputPtr = safeString(sealPreCommitPhase1OutputPtr)
 	csealPreCommitPhase1OutputPtr, csealPreCommitPhase1OutputPtrAllocMap := unpackPUint8TString(sealPreCommitPhase1OutputPtr)
@@ -1000,10 +1264,14 @@ func FilSealPreCommitPhase2(sealPreCommitPhase1OutputPtr string, sealPreCommitPh
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilUnsealRange function as declared in filecoin-ffi/filcrypto.h:712
 =======
 // FilUnsealRange function as declared in filecoin-ffi/filcrypto.h:626
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilUnsealRange function as declared in filecoin-ffi/filcrypto.h:689
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilUnsealRange(registeredProof FilRegisteredSealProof, cacheDirPath string, sealedSectorFdRaw int32, unsealOutputFdRaw int32, sectorId uint64, proverId Fil32ByteArray, ticket Fil32ByteArray, commD Fil32ByteArray, unpaddedByteIndex uint64, unpaddedBytesAmount uint64) *FilUnsealRangeResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	cacheDirPath = safeString(cacheDirPath)
@@ -1033,12 +1301,16 @@ func FilUnsealRange(registeredProof FilRegisteredSealProof, cacheDirPath string,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerify function as declared in filecoin-ffi/filcrypto.h:734
 func FilVerify(signaturePtr []byte, flattenedDigestsPtr []byte, flattenedDigestsLen uint, flattenedPublicKeysPtr []byte, flattenedPublicKeysLen uint) int32 {
 	csignaturePtr, csignaturePtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&signaturePtr)))
 	cflattenedDigestsPtr, cflattenedDigestsPtrAllocMap := copyPUint8TBytes((*sliceHeader)(unsafe.Pointer(&flattenedDigestsPtr)))
 =======
 // FilVerify function as declared in filecoin-ffi/filcrypto.h:648
+=======
+// FilVerify function as declared in filecoin-ffi/filcrypto.h:711
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilVerify(signaturePtr string, flattenedDigestsPtr string, flattenedDigestsLen uint, flattenedPublicKeysPtr string, flattenedPublicKeysLen uint) int32 {
 	signaturePtr = safeString(signaturePtr)
 	csignaturePtr, csignaturePtrAllocMap := unpackPUint8TString(signaturePtr)
@@ -1059,10 +1331,14 @@ func FilVerify(signaturePtr string, flattenedDigestsPtr string, flattenedDigests
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifySeal function as declared in filecoin-ffi/filcrypto.h:744
 func FilVerifySeal(registeredProof FilRegisteredSealProof, commR Fil32ByteArray, commD Fil32ByteArray, proverId Fil32ByteArray, ticket Fil32ByteArray, seed Fil32ByteArray, sectorId uint64, proofPtr []byte, proofLen uint) *FilVerifySealResponse {
 =======
 // FilVerifySeal function as declared in filecoin-ffi/filcrypto.h:658
+=======
+// FilVerifySeal function as declared in filecoin-ffi/filcrypto.h:721
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilVerifySeal(registeredProof FilRegisteredSealProof, commR Fil32ByteArray, commD Fil32ByteArray, proverId Fil32ByteArray, ticket Fil32ByteArray, seed Fil32ByteArray, sectorId uint64, proofPtr string, proofLen uint) *FilVerifySealResponse {
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
@@ -1089,10 +1365,14 @@ func FilVerifySeal(registeredProof FilRegisteredSealProof, commR Fil32ByteArray,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifyWindowPost function as declared in filecoin-ffi/filcrypto.h:757
 =======
 // FilVerifyWindowPost function as declared in filecoin-ffi/filcrypto.h:671
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilVerifyWindowPost function as declared in filecoin-ffi/filcrypto.h:734
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilVerifyWindowPost(randomness Fil32ByteArray, replicasPtr []FilPublicReplicaInfo, replicasLen uint, proofsPtr []FilPoStProof, proofsLen uint, proverId Fil32ByteArray) *FilVerifyWindowPoStResponse {
 	crandomness, crandomnessAllocMap := randomness.PassValue()
 	creplicasPtr, creplicasPtrAllocMap := unpackArgSFilPublicReplicaInfo(replicasPtr)
@@ -1114,10 +1394,14 @@ func FilVerifyWindowPost(randomness Fil32ByteArray, replicasPtr []FilPublicRepli
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilVerifyWinningPost function as declared in filecoin-ffi/filcrypto.h:767
 =======
 // FilVerifyWinningPost function as declared in filecoin-ffi/filcrypto.h:681
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilVerifyWinningPost function as declared in filecoin-ffi/filcrypto.h:744
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilVerifyWinningPost(randomness Fil32ByteArray, replicasPtr []FilPublicReplicaInfo, replicasLen uint, proofsPtr []FilPoStProof, proofsLen uint, proverId Fil32ByteArray) *FilVerifyWinningPoStResponse {
 	crandomness, crandomnessAllocMap := randomness.PassValue()
 	creplicasPtr, creplicasPtrAllocMap := unpackArgSFilPublicReplicaInfo(replicasPtr)
@@ -1139,10 +1423,14 @@ func FilVerifyWinningPost(randomness Fil32ByteArray, replicasPtr []FilPublicRepl
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilWriteWithAlignment function as declared in filecoin-ffi/filcrypto.h:778
 =======
 // FilWriteWithAlignment function as declared in filecoin-ffi/filcrypto.h:692
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilWriteWithAlignment function as declared in filecoin-ffi/filcrypto.h:755
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilWriteWithAlignment(registeredProof FilRegisteredSealProof, srcFd int32, srcSize uint64, dstFd int32, existingPieceSizesPtr []uint64, existingPieceSizesLen uint) *FilWriteWithAlignmentResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	csrcFd, csrcFdAllocMap := (C.int)(srcFd), cgoAllocsUnknown
@@ -1162,10 +1450,14 @@ func FilWriteWithAlignment(registeredProof FilRegisteredSealProof, srcFd int32, 
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // FilWriteWithoutAlignment function as declared in filecoin-ffi/filcrypto.h:789
 =======
 // FilWriteWithoutAlignment function as declared in filecoin-ffi/filcrypto.h:703
 >>>>>>> 803fdd6 (move 8GiB enum to the end)
+=======
+// FilWriteWithoutAlignment function as declared in filecoin-ffi/filcrypto.h:766
+>>>>>>> d1f84bb (run the make cgo-gen)
 func FilWriteWithoutAlignment(registeredProof FilRegisteredSealProof, srcFd int32, srcSize uint64, dstFd int32) *FilWriteWithoutAlignmentResponse {
 	cregisteredProof, cregisteredProofAllocMap := (C.fil_RegisteredSealProof)(registeredProof), cgoAllocsUnknown
 	csrcFd, csrcFdAllocMap := (C.int)(srcFd), cgoAllocsUnknown
