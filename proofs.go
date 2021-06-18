@@ -980,23 +980,12 @@ func toFilRegisteredSealProof(p abi.RegisteredSealProof) (generated.FilRegistere
 		return generated.FilRegisteredSealProofStackedDrg8MiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg512MiBV1:
 		return generated.FilRegisteredSealProofStackedDrg512MiBV1, nil
-    case abi.RegisteredSealProof_StackedDrg8GiBV1:
-        return generated.FilRegisteredSealProofStackedDrg8GiBV1, nil
+	case abi.RegisteredSealProof_StackedDrg8GiBV1:
+		return generated.FilRegisteredSealProofStackedDrg8GiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg32GiBV1:
 		return generated.FilRegisteredSealProofStackedDrg32GiBV1, nil
 	case abi.RegisteredSealProof_StackedDrg64GiBV1:
 		return generated.FilRegisteredSealProofStackedDrg64GiBV1, nil
-
-	case abi.RegisteredSealProof_StackedDrg2KiBV1_1:
-		return generated.FilRegisteredSealProofStackedDrg2KiBV11, nil
-	case abi.RegisteredSealProof_StackedDrg8MiBV1_1:
-		return generated.FilRegisteredSealProofStackedDrg8MiBV11, nil
-	case abi.RegisteredSealProof_StackedDrg512MiBV1_1:
-		return generated.FilRegisteredSealProofStackedDrg512MiBV11, nil
-	case abi.RegisteredSealProof_StackedDrg32GiBV1_1:
-		return generated.FilRegisteredSealProofStackedDrg32GiBV11, nil
-	case abi.RegisteredSealProof_StackedDrg64GiBV1_1:
-		return generated.FilRegisteredSealProofStackedDrg64GiBV11, nil
 	default:
 		return 0, errors.Errorf("no mapping to C.FFIRegisteredSealProof value available for: %v", p)
 	}
